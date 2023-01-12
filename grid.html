@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            gap: 5px;
+            width: 80%;
+            grid-template-columns: 50px repeat(4, 1fr);
+            grid-template-rows: 200px 100px 150px 250px;
+            /* align-content: center; */
+        }
+
+        .box {
+            background-color: aquamarine;
+            /* width: 70px;  */
+            /* height: 70px; */
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar {
+            grid-row: 1 / -1;
+        }
+
+        .header {
+            grid-column: 2 / -1;
+        }
+
+        .chat__one {
+            grid-column: 2/4;
+        }
+        .chat__two{
+            grid-column: 4/ 6;
+        }
+        .over__view{
+         grid-column: 2/5;  
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box sidebar">Side Bar</div>
+        <div class="box header">Header</div>
+        <div class="box">Star One</div>
+        <div class="box">Stat Two</div>
+        <div class="box ">Stat Three</div>
+        <div class="box">Stat four</div>
+        <div class="box chat__one">CHart One</div>
+        <div class="box chat__two">Chart Two</div>
+        <div class="box over__view">Over View</div>
+        <div class="box">Reminder</div>
+    </div>
+</body>
+
+</html>
